@@ -3,3 +3,20 @@
 body {
   min-height: 100vh;
 }
+
+/* Временный блок вместо изображения на странице курса */
+.placeholder-image {
+  min-height: 320px;
+}
+
+/* Крупная подпись уровня в блоке изображения */
+.level-mark {
+  font-size: 5rem;
+  line-height: 1;
+}
+
+/* Изображение в карточке (пригодится, когда появятся фото курсов) */
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
