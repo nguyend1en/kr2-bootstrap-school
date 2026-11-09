@@ -292,14 +292,16 @@
         </div>
         <div class="modal-body">
           <p class="text-muted">Оставьте контакты — куратор свяжется с вами и подберёт время пробного занятия.</p>
-          <form id="trialForm" action="#" method="post">
+          <form class="needs-validation" id="trialForm" action="#" method="post" novalidate>
             <div class="mb-3">
               <label for="modal-name" class="form-label">Имя</label>
               <input id="modal-name" name="name" type="text" class="form-control" required>
+              <div class="invalid-feedback">Введите имя.</div>
             </div>
             <div class="mb-3">
               <label for="modal-phone" class="form-label">Телефон или Telegram</label>
               <input id="modal-phone" name="contact" type="text" class="form-control" required>
+              <div class="invalid-feedback">Укажите телефон или ник в Telegram.</div>
             </div>
             <div class="mb-3">
               <label for="modal-level" class="form-label">Ваш уровень</label>
@@ -314,6 +316,7 @@
             <div class="form-check mb-3">
               <input id="modal-agree" name="agree" class="form-check-input" type="checkbox" required>
               <label class="form-check-label" for="modal-agree">Согласен на обработку данных</label>
+              <div class="invalid-feedback">Нужно согласие.</div>
             </div>
           </form>
         </div>
@@ -321,6 +324,15 @@
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
           <button type="submit" class="btn btn-primary" form="trialForm">Отправить</button>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div class="toast text-bg-success border-0" id="success-toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">Заявка отправлена! Куратор свяжется с вами в течение рабочего дня.</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Закрыть"></button>
       </div>
     </div>
   </div>

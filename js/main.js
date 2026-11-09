@@ -82,3 +82,30 @@ if (levelTest) {
     warning.classList.add('d-none');
   });
 }
+
+// 3. Проверка форм заявки (order.html и модальное окно в catalog.html)
+document.querySelectorAll('#order-form, #trialForm').forEach((form) => {
+  form.addEventListener('submit', (event) => {
+    // Сервера пока нет, поэтому страницу не перезагружаем
+    event.preventDefault();
+
+    // checkValidity() проверяет required, type="email", minlength
+    if (!form.checkValidity()) {
+      // was-validated включает красные рамки и тексты .invalid-feedback
+      form.classList.add('was-validated');
+      return;
+    }
+
+    form.reset();
+    form.classList.remove('was-validated');
+
+    // Если форма внутри модального окна — закрываем окно
+    const modal = form.closest('.modal');
+    if (modal) {
+      bootstrap.Modal.getInstance(modal).hide();
+    }
+
+    // Показываем всплывающее уведомление Bootstrap Toast
+    bootstrap.Toast.getOrCreateInstance(document.getElementById('success-toast')).show();
+  });
+});
