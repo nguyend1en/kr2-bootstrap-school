@@ -20,3 +20,13 @@ body {
   height: 180px;
   object-fit: cover;
 }
+
+/* Круг с инициалами преподавателя вместо фотографии */
+.teacher-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  font-size: 1.5rem;
+}
