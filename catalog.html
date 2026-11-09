@@ -73,8 +73,28 @@
       <a class="btn btn-outline-primary" href="order.html">Записаться на курс</a>
     </div>
 
-    <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
+    <div class="d-flex flex-wrap align-items-center gap-3 mb-4">
+      <div class="btn-group flex-wrap" role="group" aria-label="Фильтр курсов по уровню">
+        <input type="radio" class="btn-check" name="level-filter" id="filter-all" value="all" checked>
+        <label class="btn btn-outline-primary" for="filter-all">Все курсы</label>
+
+        <input type="radio" class="btn-check" name="level-filter" id="filter-beginner" value="beginner">
+        <label class="btn btn-outline-primary" for="filter-beginner">A1–A2</label>
+
+        <input type="radio" class="btn-check" name="level-filter" id="filter-intermediate" value="intermediate">
+        <label class="btn btn-outline-primary" for="filter-intermediate">B1</label>
+
+        <input type="radio" class="btn-check" name="level-filter" id="filter-advanced" value="advanced">
+        <label class="btn btn-outline-primary" for="filter-advanced">B2 и выше</label>
+
+        <input type="radio" class="btn-check" name="level-filter" id="filter-club" value="club">
+        <label class="btn btn-outline-primary" for="filter-club">Разговорный клуб</label>
+      </div>
+      <p class="mb-0 text-muted" id="course-count" aria-live="polite">Показано курсов: 6</p>
+    </div>
+
+    <div class="row g-4" id="course-list">
+        <div class="col-12 col-md-6 col-lg-4" data-group="beginner">
           <div class="card h-100 shadow-sm">
             <div class="card-header bg-white d-flex justify-content-between align-items-center">
               <span class="fw-bold text-primary">Уровень A1</span>
@@ -101,7 +121,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4" data-group="beginner">
           <div class="card h-100 shadow-sm">
             <div class="card-header bg-white d-flex justify-content-between align-items-center">
               <span class="fw-bold text-primary">Уровень A2</span>
@@ -128,7 +148,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4" data-group="intermediate">
           <div class="card h-100 shadow-sm">
             <div class="card-header bg-white d-flex justify-content-between align-items-center">
               <span class="fw-bold text-primary">Уровень B1</span>
@@ -155,7 +175,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4" data-group="advanced">
           <div class="card h-100 shadow-sm">
             <div class="card-header bg-white d-flex justify-content-between align-items-center">
               <span class="fw-bold text-primary">Уровень B2</span>
@@ -182,7 +202,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4" data-group="club">
           <div class="card h-100 shadow-sm">
             <div class="card-header bg-white d-flex justify-content-between align-items-center">
               <span class="fw-bold text-primary">Уровень A2–C1</span>
@@ -209,7 +229,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-md-6 col-lg-4" data-group="advanced">
           <div class="card h-100 shadow-sm">
             <div class="card-header bg-white d-flex justify-content-between align-items-center">
               <span class="fw-bold text-primary">Уровень B2–C1</span>
@@ -302,5 +322,6 @@
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
   </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
