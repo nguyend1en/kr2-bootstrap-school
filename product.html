@@ -106,40 +106,120 @@
     </div>
 
     <section class="mt-5">
-      <h2 class="h4 mb-3">Информация о курсе</h2>
-      <div class="table-responsive">
-        <table class="table table-striped table-bordered align-middle">
-          <tbody>
-            <tr>
-              <th scope="row">Уровень</th>
-              <td>A1 (начальный)</td>
-            </tr>
-            <tr>
-              <th scope="row">Длительность</th>
-              <td>12 недель, 24 занятия</td>
-            </tr>
-            <tr>
-              <th scope="row">Формат</th>
-              <td>онлайн, Zoom</td>
-            </tr>
-            <tr>
-              <th scope="row">Расписание</th>
-              <td>вторник и четверг, 18:30–20:00 (МСК)</td>
-            </tr>
-            <tr>
-              <th scope="row">Группа</th>
-              <td>до 8 человек</td>
-            </tr>
-            <tr>
-              <th scope="row">Стоимость</th>
-              <td>6 500 руб. в месяц</td>
-            </tr>
-            <tr>
-              <th scope="row">Итог курса</th>
-              <td>сертификат школы, готовность к курсу A2</td>
-            </tr>
-          </tbody>
-        </table>
+      <ul class="nav nav-tabs" id="courseTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="info-tab" data-bs-toggle="tab" data-bs-target="#info-pane" type="button" role="tab" aria-controls="info-pane" aria-selected="true">Информация о курсе</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="program-tab" data-bs-toggle="tab" data-bs-target="#program-pane" type="button" role="tab" aria-controls="program-pane" aria-selected="false">Программа</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="schedule-tab" data-bs-toggle="tab" data-bs-target="#schedule-pane" type="button" role="tab" aria-controls="schedule-pane" aria-selected="false">Расписание групп</button>
+        </li>
+      </ul>
+      <div class="tab-content border border-top-0 rounded-bottom bg-white p-3" id="courseTabsContent">
+        <div class="tab-pane fade show active" id="info-pane" role="tabpanel" aria-labelledby="info-tab" tabindex="0">
+          <div class="table-responsive">
+            <table class="table table-striped table-bordered align-middle">
+              <tbody>
+                <tr>
+                  <th scope="row">Уровень</th>
+                  <td>A1 (начальный)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Длительность</th>
+                  <td>12 недель, 24 занятия</td>
+                </tr>
+                <tr>
+                  <th scope="row">Формат</th>
+                  <td>онлайн, Zoom</td>
+                </tr>
+                <tr>
+                  <th scope="row">Расписание</th>
+                  <td>вторник и четверг, 18:30–20:00 (МСК)</td>
+                </tr>
+                <tr>
+                  <th scope="row">Группа</th>
+                  <td>до 8 человек</td>
+                </tr>
+                <tr>
+                  <th scope="row">Стоимость</th>
+                  <td>6 500 руб. в месяц</td>
+                </tr>
+                <tr>
+                  <th scope="row">Итог курса</th>
+                  <td>сертификат школы, готовность к курсу A2</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="program-pane" role="tabpanel" aria-labelledby="program-tab" tabindex="0">
+          <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex gap-3">
+                <span class="fw-bold text-primary text-nowrap">Недели 1–2</span>
+                <span>Алфавит, правила чтения, произношение</span>
+              </li>
+              <li class="list-group-item d-flex gap-3">
+                <span class="fw-bold text-primary text-nowrap">Недели 3–4</span>
+                <span>Знакомство, рассказ о себе, род существительных</span>
+              </li>
+              <li class="list-group-item d-flex gap-3">
+                <span class="fw-bold text-primary text-nowrap">Недели 5–6</span>
+                <span>Числа, время, покупки; винительный падеж</span>
+              </li>
+              <li class="list-group-item d-flex gap-3">
+                <span class="fw-bold text-primary text-nowrap">Недели 7–8</span>
+                <span>Город и транспорт, предложный падеж места</span>
+              </li>
+              <li class="list-group-item d-flex gap-3">
+                <span class="fw-bold text-primary text-nowrap">Недели 9–10</span>
+                <span>Учёба и работа; глаголы настоящего и прошедшего времени</span>
+              </li>
+              <li class="list-group-item d-flex gap-3">
+                <span class="fw-bold text-primary text-nowrap">Недели 11–12</span>
+                <span>Повторение и итоговый тест уровня A1</span>
+              </li>
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="schedule-pane" role="tabpanel" aria-labelledby="schedule-tab" tabindex="0">
+          <div class="table-responsive">
+            <table class="table align-middle mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">Группа</th>
+                  <th scope="col">Старт</th>
+                  <th scope="col">Дни и время (МСК)</th>
+                  <th scope="col">Преподаватель</th>
+                  <th scope="col">Места</th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                    <th scope="row">A1-11</th>
+                    <td>10 ноября</td>
+                    <td>вт, чт 18:30–20:00</td>
+                    <td>Анна Белова</td>
+                    <td><span class="badge bg-warning text-dark">3 места</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">A1-12</th>
+                    <td>17 ноября</td>
+                    <td>пн, ср 10:00–11:30</td>
+                    <td>Дмитрий Новиков</td>
+                    <td><span class="badge bg-success">6 мест</span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">A1-10</th>
+                    <td>27 октября</td>
+                    <td>сб 11:00–14:00</td>
+                    <td>Анна Белова</td>
+                    <td><span class="badge bg-secondary">Мест нет</span></td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </section>
 
